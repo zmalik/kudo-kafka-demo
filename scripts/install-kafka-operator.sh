@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-KUDO_KAFKA_VERSION="${KUDO_KAFKA_VERSION:-0.1.1}"
+KUDO_KAFKA_VERSION="${KUDO_KAFKA_VERSION:-0.2.0}"
 KUDO_KAFKA_NS="kudo-kafka"
 
 

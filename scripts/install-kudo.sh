@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-CONTROLLER_VERSION="${CONTROLLER_VERSION:-0.3.3}"
+CONTROLLER_VERSION="${CONTROLLER_VERSION:-0.4.0}"
 
 VERSION=`kubectl kudo version | cut -b 40-44`
 

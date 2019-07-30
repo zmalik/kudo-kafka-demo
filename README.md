@@ -1,9 +1,7 @@
 # KUDO Kafka Cluster runbook  
 
 
-
 This document is to create a KUDO Kafka cluster and run a dummy workload on the created KUDO Kafka cluster
-
 
 
 ### Pre-requisites
@@ -26,13 +24,13 @@ cd kudo-kafka-demo
 Skip this step if KUDO is already installed
 
 ```bash
-CONTROLLER_VERSION=0.3.3 scripts/install-kudo.sh
+CONTROLLER_VERSION=0.4.0 scripts/install-kudo.sh
 ```
 
 ### Install the Operator/OperatorVersion for KUDO Kafka (with instance)
 
 ```bash
-KUDO_KAFKA_VERSION=0.1.1 scripts/install-kafka-operator.sh
+KUDO_KAFKA_VERSION=0.2.0 scripts/install-kafka-operator.sh
 ```
 
 ### Install the service-monitor
@@ -61,8 +59,6 @@ And the dashboard with a preview of the cluster activity:
 kubectl apply -f resources/load-tests.yml -n kudo-kafka
 ```
 
-
-
 ### Scaling the load tests
 
 We can scale horizontally the load tests by increasing or decreasing the number of replicas
@@ -75,15 +71,13 @@ kubectl scale deployment kafka-cluster-consumer-tests --replicas=1 -n kudo-kafka
 kubectl scale deployment kafka-cluster-producer-tests --replicas=1 -n kudo-kafka
 ```
 
-
-
 ### Tear down the resources
 
 With the next commands we can cleanup all objects we created for kafka test and also cleanup any running workload.
 
 ```
-KUDO_KAFKA_VERSION=0.1.1 scripts/uninstall-kafka-operator.sh
-CONTROLLER_VERSION=0.3.3 scripts/uninstall-kudo.sh
+KUDO_KAFKA_VERSION=0.2.0 scripts/uninstall-kafka-operator.sh
+CONTROLLER_VERSION=0.4.0 scripts/uninstall-kudo.sh
 ```
 
 
