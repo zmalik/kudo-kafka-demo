@@ -24,7 +24,7 @@ cd kudo-kafka-demo
 Skip this step if KUDO is already installed
 
 ```bash
-CONTROLLER_VERSION=0.4.0 scripts/install-kudo.sh
+CONTROLLER_VERSION=0.5.0 scripts/install-kudo.sh
 ```
 
 ### Install the Operator/OperatorVersion for KUDO Kafka (with instance)
@@ -77,7 +77,7 @@ With the next commands we can cleanup all objects we created for kafka test and 
 
 ```
 KUDO_KAFKA_VERSION=0.2.0 scripts/uninstall-kafka-operator.sh
-CONTROLLER_VERSION=0.4.0 scripts/uninstall-kudo.sh
+CONTROLLER_VERSION=0.5.0 scripts/uninstall-kudo.sh
 ```
 
 

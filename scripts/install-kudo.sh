@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-CONTROLLER_VERSION="${CONTROLLER_VERSION:-0.4.0}"
+CONTROLLER_VERSION="${CONTROLLER_VERSION:-0.5.0}"
 
 VERSION=`kubectl kudo version | cut -b 40-44`
 
@@ -16,4 +16,5 @@ echo "Installing CRDs"
 kubectl apply -f https://raw.githubusercontent.com/kudobuilder/kudo/v${CONTROLLER_VERSION}/docs/deployment/10-crds.yaml
 
 echo "Installing KUDO operator"
-kubectl apply -f resources/kudo-deployment.yaml
+kubectl apply -f https://raw.githubusercontent.com/kudobuilder/kudo/v${CONTROLLER_VERSION}/docs/deployment/20-deployment.yaml
+
